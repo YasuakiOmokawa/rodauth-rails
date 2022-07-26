@@ -20,3 +20,5 @@ if RUBY_VERSION >= "3.1.0"
   # rake gem dependency on Ruby 3.1+
   gem "matrix"
 end
+
+gem 'debug'
