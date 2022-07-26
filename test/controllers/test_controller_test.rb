@@ -4,6 +4,7 @@ class TestControllerTest < ActionController::TestCase
   include TestSetupTeardown
 
   test "integration" do
+    binding.b
     get :auth2
     assert_response 302
     assert_redirected_to "/login"
@@ -31,6 +32,7 @@ class TestControllerTest < ActionController::TestCase
   def login(account)
     session[:account_id] = account.id
     session[:authenticated_by] = ["password"]
+    binding.b
   end
 
   def logout

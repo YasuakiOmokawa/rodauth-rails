@@ -11,6 +11,7 @@ require "i18n/backend/simple" # workaround for https://github.com/jruby/jruby/is
 require_relative "rails_app/config/environment"
 require "rails/test_help"
 require "capybara/rails"
+require 'debug'
 
 ActiveRecord::Migrator.migrations_paths = [Rails.root.join("db/migrate")]
 Rails.backtrace_cleaner.remove_silencers! # show full stack traces
